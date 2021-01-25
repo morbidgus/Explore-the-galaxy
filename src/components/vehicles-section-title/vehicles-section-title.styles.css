@@ -1,0 +1,11 @@
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+.category-title {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+}

@@ -1,0 +1,9 @@
+/* responsive media queries */
+
+/* smartphones, Android phones, landscape iPhone */
+
+@media (max-width: 650px) {
+  .title-image {
+    width: 80%;
+  }
+}

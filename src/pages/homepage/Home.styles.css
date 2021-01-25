@@ -1,0 +1,76 @@
+.hero-container {
+  min-height: 100vh;
+  width: 100%;
+  background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(0, 0, 0, 0.21) 0%,
+      rgba(0, 0, 0, 0.78) 100%
+    ),
+    url("../../assets/background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.catchphrase {
+  font-size: 3rem;
+}
+
+.content-container {
+  position: relative;
+  width: 60%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lightsaber {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* responsive media queries */
+
+/* big landscape tablets, laptops, and desktops */
+
+@media (max-width: 1025px) {
+  .content-container {
+    width: 70%;
+  }
+}
+
+/* portrait tablets, portrait iPad, e-readers, landscape 800x480 phones (Android) */
+
+@media (max-width: 720px) {
+  .content-container {
+    width: 80%;
+  }
+  .star-wars-logo {
+    width: 80%;
+  }
+}
+
+/* smartphones, Android phones, landscape iPhone */
+
+@media (max-width: 650px) {
+  .lightsaber {
+    display: none;
+  }
+}
+/* smartphones, Android phones, landscape iPhone */
+
+@media (max-width: 480px) {
+  .content-container {
+    width: 90%;
+  }
+  .catchphrase {
+    font-size: 2rem;
+  }
+}
