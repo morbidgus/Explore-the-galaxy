@@ -36,6 +36,11 @@
   transform: translateX(-50%);
 }
 
+.route {
+  text-decoration: none;
+  color: #f9f9f9;
+}
+
 /* responsive media queries */
 
 /* big landscape tablets, laptops, and desktops */

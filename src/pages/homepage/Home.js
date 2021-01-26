@@ -1,4 +1,5 @@
 import './Home.styles.css';
+import { Link } from 'react-router-dom';
 import starWarsLogo from '../../assets/star-wars-logo.png';
 import lightsaber from '../../assets/lightsaber.png';
 import AnimatedCharacter from '../../components/animated-character/animated-character';
@@ -18,9 +19,13 @@ const Home = () => {
     </div>
     <section className="content-container">
       <div className="content-column">
-        <CharactersSectionTitle />
+        <Link to='/characters' className="route">
+          <CharactersSectionTitle />
+        </Link>
         <CharacterCardsColumn />
-        <ViewMore />
+        <Link to='/characters' className="route">
+          <ViewMore />
+        </Link>
       </div>
       <img src={lightsaber} alt="lightsaber" className="lightsaber"/>
       <div className="content-column">

@@ -22,29 +22,26 @@ class CharactersPage extends React.Component{
   componentDidMount(){
     function getAllStarwarsCharacters() {
       let characters = [];
-      // first page
+
       return axios("https://swapi.py4e.com/api/people/")
-          .then(response => {
-              // collect people from first page
-              characters = response.data.results;
-              return response.data.count;
-          })
-          .then(count => {
-              // exclude the first request
-              const numberOfPagesLeft = Math.ceil((count - 1) / 10);
-              let promises = [];
-              // start at 2 as you already queried the first page
-              for (let i = 2; i <= numberOfPagesLeft; i++) {
-                  promises.push(axios(`https://swapi.py4e.com/api/people?page=${i}`));
-              }
-              return Promise.all(promises);
-          })
-          .then(response => {
-              //get the rest records - pages 2 through n.
-              characters = response.reduce((acc, data) => [...acc, ...data.data.results], characters);
-              return characters;
-          })
-          .catch(error => console.log("Something wrong. Please refresh the page and try again."));
+        .then(response => {
+          characters = response.data.results;
+          return response.data.count;
+        })
+        .then(count => {
+          const numberOfPagesLeft = Math.ceil((count - 1) / 10);
+          let promises = [];
+
+          for (let i = 2; i <= numberOfPagesLeft; i++) {
+            promises.push(axios(`https://swapi.py4e.com/api/people?page=${i}`));
+          }
+          return Promise.all(promises);
+        })
+        .then(response => {
+          characters = response.reduce((acc, data) => [...acc, ...data.data.results], characters);
+          return characters;
+        })
+        .catch(error => console.log("Something wrong. Please refresh the page and try again."));
     }
   
   (async () => {
