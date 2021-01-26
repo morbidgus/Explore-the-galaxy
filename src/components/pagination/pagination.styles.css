@@ -1,0 +1,19 @@
+.pagination-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto;
+}
+
+.page-selector {
+  text-align: center;
+  margin: 0 1rem;
+  width: 20px;
+  color: #f9f9f9;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.page-selector:hover {
+  color: #5e5cca;
+}

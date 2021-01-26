@@ -7,7 +7,7 @@ const SearchInput = ({ handleChange }) => (
       type="search" 
       placeholder="Search character" 
       onChange={handleChange}
-      spellcheck="false" 
+      spellCheck="false" 
       required 
     />
   </form>
