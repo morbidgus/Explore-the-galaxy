@@ -1,0 +1,26 @@
+.input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.input-field {
+  height: 30px;
+  width: 18rem;
+  border: none;
+  border-bottom: 2px solid silver;
+  background-color: transparent;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+  margin-bottom: 1rem;
+  color: #f9f9f9;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+}
+
+.input-field:focus {
+  border-bottom: 2px solid #5d4bc5;
+  outline: none;
+}

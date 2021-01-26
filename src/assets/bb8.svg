@@ -1,0 +1,47 @@
+<svg width="150" height="165" viewBox="0 0 150 165" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="bb8">
+<g id="body">
+  <circle id="body mass" cx="86.4017" cy="104.284" r="44.7191" transform="rotate(-14.9321 86.4017 104.284)" fill="#E4E4E3"/>
+  <path id="Vector 11" d="M70.2026 77.3489L97.4375 75.796" stroke="#B2B0B2" stroke-width="6"/>
+  <path id="Vector 12" d="M57.6033 104.15L72.9434 126.708" stroke="#B2B0B2" stroke-width="6"/>
+  <path id="Vector 13" d="M113.868 99.7421L101.953 124.281" stroke="#B2B0B2" stroke-width="6"/>
+  <g id="yellow stripes">
+    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="31" y="49" width="111" height="111">
+    <circle id="Ellipse 4" cx="86.4017" cy="104.284" r="44.7191" transform="rotate(-14.9321 86.4017 104.284)" fill="#D1D1D1"/>
+    </mask>
+    <g mask="url(#mask0)">
+      <g id="Group 1">
+      <circle id="Ellipse 6" cx="88.2353" cy="149.476" r="24.4422" transform="rotate(-14.9321 88.2353 149.476)" stroke="#F79726" stroke-width="15"/>
+      <circle id="Ellipse 7" cx="42.0699" cy="80.0427" r="24.4422" transform="rotate(-14.9321 42.0699 80.0427)" stroke="#F79726" stroke-width="15"/>
+      <circle id="Ellipse 8" cx="124.523" cy="73.682" r="24.4422" transform="rotate(-14.9321 124.523 73.682)" stroke="#F79726" stroke-width="15"/>
+      </g>
+    </g>
+  </g>
+</g>
+<g id="dust">
+  <path id="Vector 5" d="M127.947 134.979C132.367 129.393 140.318 113.528 136.756 94.7629" stroke="#B3B1B3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="Vector 6" d="M38.1894 122.028C35.3893 115.477 31.8791 98.0824 40.2391 80.909" stroke="#B3B1B3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle id="Ellipse 5" cx="134.437" cy="86.0648" r="2.32307" transform="rotate(-14.9321 134.437 86.0648)" fill="#B3B1B3"/>
+</g>
+<g id="head">
+  <path id="Vector 7" d="M98.2792 66.5556C100.524 65.957 102.419 64.049 103.086 63.1699L98.1295 61.4865L54.6398 73.0842C53.6921 74.0382 51.6732 76.1594 51.1794 77.0124C52.8853 78 55.7934 77.7855 57.0342 77.5548L98.2792 66.5556Z" fill="#969696" fill-opacity="0.31"/>
+  <rect id="Rectangle 6" x="64.5529" y="13.3395" width="4.64614" height="15.6807" transform="rotate(-14.9321 64.5529 13.3395)" fill="#808080"/>
+  <rect id="Rectangle 7" x="56.7716" y="20.2231" width="4.64614" height="10.4538" transform="rotate(-14.9321 56.7716 20.2231)" fill="#808080"/>
+  <path id="Vector 4" d="M65.1383 27.6089C42.4676 33.6547 43.8333 55.5299 47.35 65.7118L100.66 51.4952C98.2655 41.014 87.809 21.5631 65.1383 27.6089Z" fill="#E4E4E3"/>
+  <path id="Vector 3" d="M54.1535 73.5145L47.5504 65.6583L100.58 51.5165C100.156 54.4345 99.1994 60.54 98.7654 61.6174L54.1535 73.5145Z" fill="#B3B1B3"/>
+  <g id="Mask Group">
+  <mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="39" y="20" width="62" height="46">
+  <path id="Vector 2" d="M65.3387 27.5555C42.668 33.6013 44.0337 55.4765 47.5504 65.6583L100.86 51.4417C98.4659 40.9605 88.0095 21.5097 65.3387 27.5555Z" fill="#B3B1B3"/>
+  </mask>
+  <g mask="url(#mask1)">
+  <rect id="Rectangle 4" x="41.9948" y="48.2064" width="22.65" height="4.64614" transform="rotate(-14.9321 41.9948 48.2064)" fill="#B3B1B3"/>
+  </g>
+  </g>
+  <circle id="Ellipse 1" cx="70.09" cy="43.1182" r="6.96922" transform="rotate(-14.9321 70.09 43.1182)" fill="#0093B9"/>
+  <circle id="Ellipse 2" cx="70.09" cy="43.1182" r="4.64614" transform="rotate(-14.9321 70.09 43.1182)" fill="#2DA4C4"/>
+  <circle id="Ellipse 3" cx="70.09" cy="43.1182" r="2.32307" transform="rotate(-14.9321 70.09 43.1182)" fill="#5DB9D2"/>
+  <rect id="Rectangle 5" x="86.4758" y="45.9612" width="2.90384" height="2.90384" transform="rotate(-14.9321 86.4758 45.9612)" fill="#FBBE1F"/>
+  <ellipse id="Ellipse 9" cx="65.9512" cy="41.8326" rx="0.79395" ry="1.5879" transform="rotate(19.9338 65.9512 41.8326)" fill="#8ACADB"/>
+  </g>
+</g>
+</svg>
