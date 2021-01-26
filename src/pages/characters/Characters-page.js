@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-// import * as Utils from '../../utilities';
 import './Characters-page.styles.css';
 import CharactersSectionTitle from '../../components/characters-section-title/characters-section-title';
 import SearchInput from '../../components/search-input/search-input';

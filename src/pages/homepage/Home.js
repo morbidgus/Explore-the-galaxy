@@ -29,9 +29,13 @@ const Home = () => {
       </div>
       <img src={lightsaber} alt="lightsaber" className="lightsaber"/>
       <div className="content-column">
-        <VehiclesSectionTitle />
+        <Link to='/vehicles' className="route">
+          <VehiclesSectionTitle />
+        </Link>
         <VehicleCardsColumn />
-        <ViewMore />
+        <Link to='/vehicles' className="route">
+          <ViewMore />
+        </Link>
       </div>
     </section>
     </>
