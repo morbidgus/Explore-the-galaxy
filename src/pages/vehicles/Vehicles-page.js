@@ -11,9 +11,9 @@ class VehiclesPage extends React.Component{
 
     this.state = {
       vehicles: [],
-      searchField: '',
       currentPage: 1,
-      elementsPerPage: 20
+      elementsPerPage: 20,
+      vehicleClass: ''
     }
   }
 
@@ -51,14 +51,39 @@ class VehiclesPage extends React.Component{
   }  
 
   render(){
-    const {vehicles, currentPage, elementsPerPage} = this.state; 
+    const {vehicles, vehicleClass, currentPage, elementsPerPage} = this.state;
+    const filteredVehicles = vehicles.filter(vehicle => 
+      vehicle.vehicle_class.toLowerCase().includes(vehicleClass)
+      )
 
     const paginate = (number) => this.setState({currentPage: number});
 
     return(
       <div className="main-container">
         <VehiclesSectionTitle />
-        <CardGrid characters={vehicles}
+        <div className="filters-container">
+          <button 
+            onClick={()=> this.setState({vehicleClass: ''})} 
+            className={`${vehicleClass === '' ? 'highlight-filter' : null} filter-tag`}>
+              all
+          </button>
+          <button 
+            onClick={()=> this.setState({vehicleClass: 'starfighter'})} 
+            className={`${vehicleClass === 'starfighter' ? 'highlight-filter' : null} filter-tag`} >
+              starfighter
+          </button>
+          <button 
+            onClick={()=> this.setState({vehicleClass: 'wheeled'})} 
+            className={`${vehicleClass === 'wheeled' ? 'highlight-filter' : null} filter-tag`} >
+              wheeled
+          </button>
+          <button 
+            onClick={()=> this.setState({vehicleClass: 'speeder'})} 
+            className={`${vehicleClass === 'speeder' ? 'highlight-filter' : null} filter-tag`} >
+              speeder
+          </button>
+        </div>
+        <CardGrid characters={filteredVehicles}
           currentPage={currentPage} 
           elementsPerPage={elementsPerPage} 
         />

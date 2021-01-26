@@ -1,5 +1,4 @@
 body {
-  font-family: "Bebas Neue", cursive;
   color: #f9f9f9;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,4 +11,5 @@ body {
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  font-family: "Bebas Neue", cursive;
 }
