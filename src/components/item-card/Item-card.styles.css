@@ -9,6 +9,7 @@
   border-radius: 9px;
   cursor: pointer;
   transition: all 0.4s ease;
+  color: #f9f9f9;
 }
 
 .card-container:hover {

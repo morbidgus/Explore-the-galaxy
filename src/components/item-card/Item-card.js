@@ -1,8 +1,14 @@
 import './Item-card.styles.css';
+import { Link } from "react-router-dom";
+
+const getId = (url) => {
+  let id = url.slice(34);
+  return id;
+}; 
 
 const ItemCard = ({character, vehicle}) => {
-  return(
-  <div className="card-container">
+  return (
+  <Link to={`/character?id=${getId(character.url)}`}  className="card-container" >
     <span className="name-container">
       {
         character ?
@@ -11,7 +17,7 @@ const ItemCard = ({character, vehicle}) => {
         
       }
     </span>
-  </div>
+  </Link>
   )
 }
 
