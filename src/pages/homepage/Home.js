@@ -9,7 +9,7 @@ import CharacterCardsColumn from '../../components/character-cards-column/charac
 import VehicleCardsColumn from '../../components/vehicle-cards-column/vehicle-cards-column';
 import ViewMore from '../../components/view-more/view-more';
 
-const Home = () => {
+const Home = ({characters, vehicles}) => {
   return(
     <>
     <div className="hero-container">
@@ -22,7 +22,7 @@ const Home = () => {
         <Link to='/characters' className="route">
           <CharactersSectionTitle />
         </Link>
-        <CharacterCardsColumn />
+        <CharacterCardsColumn characters={characters}/>
         <Link to='/characters' className="route">
           <ViewMore />
         </Link>
@@ -32,7 +32,7 @@ const Home = () => {
         <Link to='/vehicles' className="route">
           <VehiclesSectionTitle />
         </Link>
-        <VehicleCardsColumn />
+        <VehicleCardsColumn vehicles={vehicles}/>
         <Link to='/vehicles' className="route">
           <ViewMore />
         </Link>
