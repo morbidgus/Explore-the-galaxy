@@ -1,8 +1,8 @@
-.title-container {
+.vehicle-title-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 6rem;
+  margin-top: 6.5rem;
 }
 
 .category-title {

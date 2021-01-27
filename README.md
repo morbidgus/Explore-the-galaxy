@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+Overview:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my solution to the test provided by Sky-tours, I hope you have as much fun testing it as I had making it. It took me around two days to complete the UX/UI design and develop it.
 
-## Available Scripts
+Getting Started:
 
-In the project directory, you can run:
+Before you continue, ensure you have met the following requirements:
 
-### `npm start`
+-Clone or download the repo into your system.
+-Run npm install to install the dependencies.
+-Run npm start and open http://localhost:3000 to view it in your browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Technologies used:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+UX/UI design:
 
-### `npm test`
+-Figma
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You can find the UX/UI design for both mobile and desktop versions at:
+https://www.figma.com/file/TGzEWjKQpQQhojWt3hZJsS/Explore-the-galaxy?node-id=0%3A1
 
-### `npm run build`
+Development:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-React
+-React Router
+-Axios
+-Css
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can find a live version of the project at:
+https://explorethegalaxy.netlify.app/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Some explanations:
 
-### `npm run eject`
+App.js{
+Here I manage the Routing of the site and import all of the pages.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Requesting data:
+Here I encountered an issue with the api, it only gives you 10 elements per page, so for me to implement a custom solution for the pagination i needed to get all of the data first. So i created a function per category that fires up as soon as the component gets mounted to quicly get the data needed. The basic logic of this functions is to request the data from a predictible url and loop through the pages until 'next page' is equal to null while concatenating the data. This results get passed as props to the page components that need it.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Pagination:
+Knowing the total amount of elements in our array, the logic is to set a limit on the amount of elements per page and with a division find out how many pages we need. I created a component for this so it can be used anywhere.
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Item-Pages{
+Showing element info:
+We have now all the data from both categories, but to show the data from only one element on command it would be inefficient to move so much data, so I chose a custom solution for it. First scraping the id from the url(since the API doesn't provide an id property) and then concatenating this id with a base url for the category to make a request and get the data for that single item.
+}
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Search(available in the characters category):
+A standard solution where you listen for changes on the input field, save that in a state and filter the array searching for strings that match the input, then save those results into an array and map to display them. I chose not to use a search button since the updates happen in real time.
 
-## Learn More
+Filtering (available in the vehicles category):
+Same logic as the search functionality but this time we just use predetermined values to compare.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Made with deditation by:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Gustavo Madrid
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://github.com/morbidgus

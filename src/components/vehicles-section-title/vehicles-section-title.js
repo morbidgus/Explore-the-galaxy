@@ -3,7 +3,7 @@ import vehicles from '../../assets/vehicles.png';
 
 const VehiclesSectionTitle = () => {
   return(
-    <div className="title-container">
+    <div className="vehicle-title-container">
       <img src={vehicles} alt="vehicles" className="title-image"/>
       <span className="category-title">VEHICLES</span>
     </div>

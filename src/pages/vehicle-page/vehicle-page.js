@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import './vehicle-page.styles.css';
 import AnimatedCharacter from '../../components/animated-character/animated-character';
+import { useHistory } from "react-router-dom";
+import BackBtn from '../../assets/back.svg';
 
 const getVehicleId = (search) => {
   search = search.slice(4);
@@ -10,6 +12,7 @@ const getVehicleId = (search) => {
 }
 
 const VehiclePage = () => {
+  let history = useHistory();
   const [itemDetails, setItemDetails] = useState();
 
   useEffect(()=>{
@@ -17,14 +20,14 @@ const VehiclePage = () => {
       .then(res => {
         const details = res.data;
         setItemDetails(details);
-        console.log(itemDetails);
       })
   }, [])
 
   const { search } = useLocation();
   let vehicleId = getVehicleId(search);
   return(
-    <div className="page-wrapper">
+    <div className="vehicles-page-wrapper">
+      <img src={BackBtn} alt="Back" onClick={() => history.goBack()} className="back-btn"/>
       {
         itemDetails ? 
           <div className="details-container">
