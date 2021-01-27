@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import ItemCard from '../item-card/Item-card';
+import HomeItemCard from '../home-item-card/home-item-card';
 
 class VehicleCardsColumn extends React.Component{
   constructor(){
@@ -25,7 +25,7 @@ class VehicleCardsColumn extends React.Component{
           {
             this.state.vehicles.map(vehicle =>
               <li key={vehicle.url}>
-                <ItemCard vehicle={vehicle} />                
+                <HomeItemCard vehicle={vehicle} />                
               </li>)
           }
         </ul>

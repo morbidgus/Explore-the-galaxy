@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './character-cards-column.styles.css';
 
-import ItemCard from '../item-card/Item-card';
+import HomeItemCard from '../home-item-card/home-item-card';
 
 class CharacterCardsColumn extends React.Component{
   constructor(){
@@ -26,7 +26,7 @@ class CharacterCardsColumn extends React.Component{
           {
             this.state.characters.map(character => 
               <li key={character.url} className="item-container">
-                <ItemCard character={character}/>
+                <HomeItemCard character={character}/>
               </li>)
           }
         </ul>
